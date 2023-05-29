@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 route::get('/kolesterol', function () {
     return view('kolesterol');
 });
+
+route::get('/formInput', [FormController::class, 'index']);
+route::get('/formInput', [FormController::class, 'hasil']);
